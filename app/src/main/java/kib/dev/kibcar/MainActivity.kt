@@ -22,6 +22,6 @@ class MainActivity : AppCompatActivity() {
 
         car.start()
 
-        carOne.start()
+        //carOne.start()
     }
 }
