@@ -1,14 +1,13 @@
 package kib.dev.kibcar
 
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 
 @Module
-class PetrolEngineModule {
+abstract class PetrolEngineModule {
 
-    @Provides
-    fun providesPetrolEngine(petrolEngine: PetrolEngine) : CarBrain {
-        return petrolEngine
-    }
+    @Binds
+    abstract fun providesPetrolEngine(petrolEngine: PetrolEngine) : CarBrain
 
 }
