@@ -9,8 +9,8 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var car: Car
 
-    @Inject
-    lateinit var carOne: Car
+//    @Inject
+//    lateinit var carOne: Car
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
