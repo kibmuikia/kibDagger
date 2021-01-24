@@ -10,13 +10,15 @@ class DieselEngine: CarBrain {
     }
 
     var powerCapacity : Int
+    var engineCapacity : Float
 
     @Inject
-    constructor(powerCapacity : Int) {
+    constructor(powerCapacity : Int, engineCapacity : Float) {
         this.powerCapacity = powerCapacity
+        this.engineCapacity = engineCapacity
     }
 
     override fun start() {
-        Log.e(logTag, ": start: Diesel Engine start: powerCapaocity[ $powerCapacity ]")
+        Log.e(logTag, ": start: Diesel Engine start: powerCapaocity[ $powerCapacity ], engineCapacity[ $engineCapacity ]")
     }
 }
