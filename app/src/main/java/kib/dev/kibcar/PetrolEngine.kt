@@ -11,7 +11,6 @@ class PetrolEngine: CarBrain {
 
     @Inject
     constructor() {
-
     }
 
     override fun start() {

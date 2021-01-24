@@ -9,12 +9,14 @@ class DieselEngine: CarBrain {
         val logTag = DieselEngine::class.java.simpleName
     }
 
-    @Inject
-    constructor() {
+    var powerCapacity : Int
 
+    @Inject
+    constructor(powerCapacity : Int) {
+        this.powerCapacity = powerCapacity
     }
 
     override fun start() {
-        Log.e(logTag, ": start: Diesel Engine start")
+        Log.e(logTag, ": start: Diesel Engine start: powerCapaocity[ $powerCapacity ]")
     }
 }

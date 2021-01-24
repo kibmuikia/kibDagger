@@ -1,7 +1,7 @@
 package kib.dev.kibcar
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -17,7 +17,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var carComponent = DaggerCarComponent.create()
+//        var carComponent = DaggerCarComponent.create()
+        var carComponent =
+            DaggerCarComponent.builder().dieselEngineModule(DieselEngineModule(450)).build()
         carComponent.inject(this)
 
         car.start()
